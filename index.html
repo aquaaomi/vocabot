@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ログイン - vocabot.xyz</title>
+    <title>ぼぼっとWeb</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
-        <h1>ようこそ - vocabot.xyz</h1>
-        <p>保護されたページにアクセスするにはログインしてください。</p>
-        <a href="./protected/" class="btn">ログイン</a>
+        <h1>ぼぼっとWeb</h1>
+        <form id="loginForm">
+            <input type="password" id="password" placeholder="パスワード" required>
+            <button type="submit" class="btn">ログイン</button>
+        </form>
+        <p id="errorMessage" style="color: red; margin-top: 10px;"></p>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お知らせ一覧 - ぼぼっとWeb</title>
+    <link rel="stylesheet" href="../css/portal.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>ぼぼっとWeb お知らせ一覧</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="./">トップ</a></li>
+                    <li><a href="./announcements_list.html">お知らせ</a></li>
+                    <li><a href="./schedule_page.html">スケジュール</a></li>
+                    <li><a href="./minutes_list.html">議事録</a></li>
+                    <li><a href="./links_page.html">リンク</a></li>
+                </ul>
+            </nav>
+            <a href="/cdn-cgi/access/logout" class="logout-btn">ログアウト</a>
+        </header>
+
+        <main class="main-content">
+            <section class="announcements-list-section">
+                <h2>すべてのお知らせ</h2>
+                <div id="announcements-container">
+                    <p>お知らせを読み込み中...</p>
+                    <!-- お知らせがここに動的に表示されます -->
+                    <div class="announcement-item">
+                        <h3>2025年6月30日 新機能リリースのお知らせ</h3>
+                        <div class="markdown-content">
+                            <p>本日、新しい検索機能がリリースされました。より効率的に情報を検索できるようになります。</p>
+                            <p>詳細はヘルプページをご確認ください。</p>
+                        </div>
+                    </div>
+                    <div class="announcement-item">
+                        <h3>2025年6月25日 システムメンテナンスのお知らせ</h3>
+                        <div class="markdown-content">
+                            <p>下記の日程でシステムメンテナンスを実施いたします。</p>
+                            <ul>
+                                <li>日時: 2025年7月5日 22:00 - 24:00</li>
+                                <li>影響: サービスが一時的に利用できなくなります。</li>
+                            </ul>
+                            <p>ご迷惑をおかけしますが、ご理解とご協力をお願いいたします。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../js/announcements_list.js"></script>
+</body>
+</html>

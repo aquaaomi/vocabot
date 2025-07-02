@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理 - ぼぼっとWeb</title>
+    <link rel="stylesheet" href="../css/portal.css">
+    <link rel="stylesheet" href="../css/admin.css"> <!-- 管理ページ専用CSS -->
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>ぼぼっとWeb 管理</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="./">トップ</a></li>
+                    <li><a href="./announcements_list.html">お知らせ</a></li>
+                    <li><a href="./schedule_page.html">スケジュール</a></li>
+                    <li><a href="./minutes_list.html">議事録</a></li>
+                    <li><a href="./links_page.html">リンク</a></li>
+                </ul>
+            </nav>
+            <a href="/cdn-cgi/access/logout" class="logout-btn">ログアウト</a>
+        </header>
+
+        <div class="admin-container">
+            <main class="admin-main-content">
+                <section class="admin-section">
+                    <h2>お知らせ 新規投稿</h2>
+                    <form id="announcementForm">
+                        <div class="form-group">
+                            <label for="announcementTitle">タイトル:</label>
+                            <input type="text" id="announcementTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="announcementContent">本文 (Markdown):</label>
+                            <textarea id="announcementContent" rows="10" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">投稿</button>
+                    </form>
+                    <p id="announcementMessage" class="form-message"></p>
+                </section>
+
+                <section class="admin-section">
+                    <h2>議事録 新規投稿</h2>
+                    <form id="minuteForm">
+                        <div class="form-group">
+                            <label for="minuteTitle">タイトル:</label>
+                            <input type="text" id="minuteTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="minuteContent">本文 (Markdown):</label>
+                            <textarea id="minuteContent" rows="10" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">投稿</button>
+                    </form>
+                    <p id="minuteMessage" class="form-message"></p>
+                </section>
+
+                <section class="admin-section">
+                    <h2>スケジュール 新規追加</h2>
+                    <form id="scheduleForm">
+                        <div class="form-group">
+                            <label for="scheduleTitle">タイトル:</label>
+                            <input type="text" id="scheduleTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="scheduleDate">日付:</label>
+                            <input type="date" id="scheduleDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="scheduleTime">時間:</label>
+                            <input type="time" id="scheduleTime" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="scheduleLocation">場所:</label>
+                            <input type="text" id="scheduleLocation" required>
+                        </div>
+                        <button type="submit" class="btn">追加</button>
+                    </form>
+                    <p id="scheduleMessage" class="form-message"></p>
+                </section>
+            </main>
+
+            <aside class="admin-sidebar">
+                <h2>投稿一覧</h2>
+                <div id="post-list">
+                    <p>投稿を読み込み中...</p>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script src="../js/admin.js"></script>
+    <script src="../js/admin_list.js"></script>
+</body>
+</html>
