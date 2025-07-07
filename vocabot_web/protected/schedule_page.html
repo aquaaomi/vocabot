@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スケジュール - ぼぼっとWeb</title>
+    <link rel="stylesheet" href="../css/portal.css">
+    <link rel="stylesheet" href="../css/schedule.css"> <!-- スケジュールページ専用CSS -->
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>ぼぼっとWeb スケジュール</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="./">トップ</a></li>
+                    <li><a href="./announcements_list.html">お知らせ</a></li>
+                    <li><a href="./schedule_page.html">スケジュール</a></li>
+                    <li><a href="./minutes_list.html">議事録</a></li>
+                    <li><a href="./links_page.html">リンク</a></li>
+                </ul>
+            </nav>
+            <a href="/cdn-cgi/access/logout" class="logout-btn">ログアウト</a>
+        </header>
+
+        <div class="schedule-container">
+            <main class="schedule-main-content">
+                <section class="schedule-list-section">
+                    <h2>今後のスケジュール</h2>
+                    <div id="schedule-list-container">
+                        <p>スケジュールを読み込み中...</p>
+                    </div>
+                </section>
+            </main>
+
+            <aside class="schedule-sidebar">
+                <h2>カレンダー</h2>
+                <div id="calendar-container">
+                    <p>カレンダーを読み込み中...</p>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script src="../js/schedule_page.js"></script>
+</body>
+</html>

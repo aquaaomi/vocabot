@@ -1,0 +1,192 @@
+.schedule-container {
+    display: flex;
+    max-width: 1800px; /* Increased width */
+    margin: 20px auto;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.schedule-main-content {
+    flex: 3; /* メインコンテンツの幅を広く */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.schedule-sidebar {
+    flex: 1; /* サイドバーの幅 */
+    background-color: rgba(25, 25, 40, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
+    border: 1px solid #8A2BE2;
+    overflow-y: auto; /* スクロール可能にする */
+    max-height: calc(100vh - 100px); /* ヘッダーなどを考慮した高さ */
+}
+
+.schedule-sidebar h2 {
+    color: #00FFFF;
+    font-size: 1.8em;
+    margin-top: 0;
+    text-shadow: 0 0 8px #00FFFF;
+    margin-bottom: 15px;
+}
+
+.schedule-list-section {
+    background-color: rgba(25, 25, 40, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
+    border: 1px solid #8A2BE2;
+}
+
+.schedule-list-section h2 {
+    color: #00FFFF;
+    font-size: 1.8em;
+    margin-top: 0;
+    text-shadow: 0 0 8px #00FFFF;
+    margin-bottom: 20px;
+}
+
+/* Calendar Styling */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.calendar-header button {
+    background-color: #FF00FF;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.calendar-header button:hover {
+    background-color: #DA70D6;
+}
+
+.calendar-header h3 {
+    color: #CAE5CD;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 days a week */
+    gap: 5px;
+    text-align: center;
+}
+
+.calendar-day-header {
+    background-color: rgba(0, 255, 255, 0.2); /* Cyan transparent */
+    padding: 8px 0;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #00FFFF;
+}
+
+.calendar-date {
+    background-color: rgba(40, 40, 60, 0.6);
+    padding: 8px 0;
+    border-radius: 5px;
+    color: #e0e0e0;
+    position: relative;
+    min-height: 40px; /* Ensure some height for dates */
+    display: flex; /* Use flexbox for content alignment */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide overflow for event bars */
+}
+
+.calendar-date.current-month {
+    color: #CAE5CD;
+}
+
+.calendar-date.other-month {
+    color: #666; /* Dim other month dates */
+}
+
+.calendar-date.today {
+    background-color: rgba(255, 0, 255, 0.4); /* Magenta for today */
+    font-weight: bold;
+}
+
+/* Event bar styling */
+.event-bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5px; /* Height of the bar */
+    bottom: 2px;
+    border-radius: 2px;
+}
+
+.event-bar-start {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.event-bar-end {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.event-bar-middle {
+    border-radius: 0;
+}
+
+.calendar-date.single-day-event {
+    border: 2px solid; /* Border for single day events */
+    box-shadow: 0 0 8px; /* Glow for single day events */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .schedule-container {
+        flex-direction: column;
+        max-width: 100%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .schedule-main-content {
+        flex: none;
+        width: 100%;
+    }
+
+    .schedule-sidebar {
+        flex: none;
+        width: 100%;
+        max-height: none;
+    }
+
+    .calendar-grid {
+        font-size: 0.8em;
+    }
+
+    .calendar-day-header, .calendar-date {
+        padding: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .schedule-container {
+        padding: 5px;
+    }
+
+    .schedule-list-section, .schedule-sidebar {
+        padding: 15px;
+    }
+
+    .calendar-grid {
+        font-size: 0.7em;
+    }
+}

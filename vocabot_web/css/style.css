@@ -1,0 +1,120 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Use min-height for better content handling */
+    margin: 0;
+    background-color: #1a1a2e; /* Dark blue for dark mode */
+    background-image: url('../images/background.jpg'); /* Changed to background.jpg */
+    background-size: cover;
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    color: #e0e0e0; /* Light text for dark background */
+    padding: 20px; /* Add some padding for small screens */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(25, 25, 40, 0.8); /* Dark, slightly transparent */
+    padding: clamp(20px, 5vw, 40px); /* Responsive padding */
+    border-radius: 15px; /* 角を丸く */
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.6), 0 0 40px rgba(255, 0, 255, 0.4); /* Neon glow */
+    border: 2px solid #8A2BE2; /* BlueViolet border */
+    width: 90%; /* Responsive width */
+    max-width: 500px; /* Max width for larger screens */
+}
+
+h1 {
+    color: #CAE5CD; /* Changed to #CAE5CD */
+    font-size: clamp(2em, 8vw, 3em); /* Responsive font size */
+    margin-bottom: clamp(20px, 4vw, 30px); /* Responsive margin */
+    text-shadow: 0 0 5px #8A2BE2, 0 0 10px #8A2BE2, 0 0 15px #8A2BE2; /* Glow halved */
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 中央揃え */
+}
+
+#password {
+    font-size: clamp(1.5em, 6vw, 32pt); /* Responsive font size */
+    padding: clamp(8px, 2vw, 10px); /* Responsive padding */
+    margin-bottom: clamp(15px, 3vw, 20px); /* Responsive margin */
+    width: 100%; /* Full width within container */
+    max-width: 400px;
+    border: 2px solid #FF69B4; /* HotPink neon border */
+    border-radius: 8px;
+    box-shadow: 0 0 10px #FF69B4, 0 0 20px rgba(255, 105, 180, 0.4); /* Neon glow */
+    background-color: rgba(0, 0, 0, 0.3); /* Dark transparent background for input */
+    color: #e0e0e0; /* Light text color */
+    text-align: center; /* Placeholder text centered */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.btn {
+    display: inline-block;
+    padding: clamp(10px, 3vw, 15px) clamp(20px, 6vw, 30px); /* Responsive padding */
+    margin-top: clamp(15px, 3vw, 20px); /* Responsive margin */
+    background-color: #FF00FF; /* Magenta neon button */
+    color: white;
+    text-decoration: none;
+    border-radius: 25px; /* ボタンを丸く */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* ホバーアニメーション */
+    font-size: clamp(1em, 4vw, 1.2em); /* Responsive font size */
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px #FF00FF, 0 0 20px rgba(255, 0, 255, 0.4); /* Neon glow */
+    width: auto; /* Adjust width based on content */
+    min-width: 150px; /* Minimum width for button */
+}
+
+.btn:hover {
+    background-color: #DA70D6; /* Orchid neon hover */
+    transform: translateY(-3px); /* 少し浮き上がる */
+    box-shadow: 0 0 15px #DA70D6, 0 0 30px rgba(218, 112, 214, 0.6); /* Stronger neon glow on hover */
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #password {
+        font-size: 1.5em;
+        padding: 8px;
+    }
+
+    .btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+/* Media Queries for very small screens */
+@media (max-width: 400px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    #password {
+        font-size: 1.3em;
+    }
+
+    .btn {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+}

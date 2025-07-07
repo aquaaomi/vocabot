@@ -1,0 +1,1 @@
+// links_page.js (現時点では特別なJavaScriptは不要です)
